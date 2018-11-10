@@ -67,7 +67,58 @@ public class DNA{
             case "AUG": System.out.print("met"); break;
             case "UUU": System.out.print("phe"); break;
             case "UUC": System.out.print("phe"); break;
-         
+            case "UUA": System.out.print("leu"); break; 
+            case "UUG": System.out.print("leu"); break;
+            case "CUU": System.out.print("leu"); break;
+            case "CUC": System.out.print("leu"); break;
+            case "CUA": System.out.print("leu"); break;
+            case "CUG": System.out.print("leu"); break;
+            case "AUU": System.out.print("ile"); break;
+            case "AUC": System.out.print("ile"); break;
+            case "AUA": System.out.print("ile"); break;
+            case "GUU": System.out.print("val"); break;
+            case "GUC": System.out.print("val"); break;
+            case "GUA": System.out.print("val"); break;
+            case "GUG": System.out.print("val"); break;
+            case "UCU": System.out.print("ser"); break;
+            case "UCC": System.out.print("ser"); break;
+            case "UCA": System.out.print("ser"); break;
+            case "UCG": System.out.print("ser"); break;
+            case "CCU": System.out.print("pro"); break;
+            case "CCC": System.out.print("pro"); break;
+            case "CCA": System.out.print("pro"); break;
+            case "CCG": System.out.print("pro"); break;
+            case "ACU": System.out.print("thr"); break;
+            case "ACC": System.out.print("thr"); break;
+            case "ACA": System.out.print("thr"); break;
+            case "ACG": System.out.print("thr"); break;
+            case "GCU": System.out.print("ala"); break;
+            case "GCC": System.out.print("ala"); break;
+            case "GCA": System.out.print("ala"); break;
+            case "GCG": System.out.print("ala"); break;
+            /*
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            case "": System.out.print(""); break;
+            */
+
+
+
+
+
         }
         
         System.out.print(" - ");
