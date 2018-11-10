@@ -5,7 +5,7 @@ public class DNA{
    static Scanner input = new Scanner(System.in);
    static String DNAStrand;
    static String mRNA = "";
-   static String temp_mRNA;
+   static String temp_mRNA = "";
 
 
    public static void main(String args[])  {
@@ -37,7 +37,7 @@ public class DNA{
    
    public static void translate(){
    
-   //search for AUG start codon
+      //search for AUG start codon
       for(int x=0; x<mRNA.length()-2; x++){
          if(mRNA.substring(x,x+3).equals("AUG")){
             System.out.println("\nStart codon AUG found. Beginning Translation");
@@ -46,7 +46,31 @@ public class DNA{
          }
       }
       
-      System.out.println(temp_mRNA);
+       //search for stop codons UAA, UAG, UGA
+       if(temp_mRNA.length() > 0){
+        
+          for(int x=0; x<temp_mRNA.length()-2; x=x+3){
+            if(temp_mRNA.substring(x,x+3).equals("UAA") || temp_mRNA.substring(x,x+3).equals("UAG") || temp_mRNA.substring(x,x+3).equals("UGA")){
+               System.out.println("\nStop codon " + temp_mRNA.substring(x,x+3) + " found");
+               break;
+            }
+            aminoAcids(temp_mRNA.substring(x,x+3));
+         
+        }
+         
+       }
+   }
    
+   public static void aminoAcids(String codon){
+
+       switch(codon){
+            case "AUG": System.out.print("met"); break;
+            case "UUU": System.out.print("phe"); break;
+            case "UUC": System.out.print("phe"); break;
+         
+        }
+        
+        System.out.print(" - ");
+        
    }
 }
