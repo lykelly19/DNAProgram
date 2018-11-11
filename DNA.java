@@ -40,25 +40,31 @@ public class DNA{
       //search for AUG start codon
       for(int x=0; x<mRNA.length()-2; x++){
          if(mRNA.substring(x,x+3).equals("AUG")){
-            System.out.println("\nStart codon AUG found. Beginning Translation");
-            temp_mRNA = mRNA.substring(x,mRNA.length());
+            System.out.println("\nStart codon AUG found. Beginning Translation...");
+            temp_mRNA = mRNA.substring(x,mRNA.length());  //cut off anything before start codon
             break;
          }
       }
-      
-       //search for stop codons UAA, UAG, UGA
+             
        if(temp_mRNA.length() > 0){
         
           for(int x=0; x<temp_mRNA.length()-2; x=x+3){
-            if(temp_mRNA.substring(x,x+3).equals("UAA") || temp_mRNA.substring(x,x+3).equals("UAG") || temp_mRNA.substring(x,x+3).equals("UGA")){
+            if(temp_mRNA.substring(x,x+3).equals("UAA") || temp_mRNA.substring(x,x+3).equals("UAG") || temp_mRNA.substring(x,x+3).equals("UGA")){  //search for stop codons UAA, UAG, UGA
                System.out.println("\nStop codon " + temp_mRNA.substring(x,x+3) + " found");
                break;
             }
             aminoAcids(temp_mRNA.substring(x,x+3));
-         
-        }
-         
+            
+            if((temp_mRNA.substring(x+3,temp_mRNA.length())).length() < 3)
+               System.out.print("\n\nNo stop codon found");
+            else if(temp_mRNA.substring(x+3,x+6).equals("UAA") || temp_mRNA.substring(x+3,x+6).equals("UAG") || temp_mRNA.substring(x+3,x+6).equals("UGA"))
+               System.out.print(" ");
+            else            
+               System.out.print(" - ");
+         } 
        }
+       else
+         System.out.println("\nStart codon was not found");
    }
    
    public static void aminoAcids(String codon){
@@ -126,8 +132,5 @@ public class DNA{
             case "GGA": System.out.print("gly"); break;
             case "GGG": System.out.print("gly"); break;
         }
-        
-        System.out.print(" - ");
-        
    }
 }
