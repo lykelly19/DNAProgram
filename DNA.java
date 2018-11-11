@@ -96,29 +96,35 @@ public class DNA{
             case "GCC": System.out.print("ala"); break;
             case "GCA": System.out.print("ala"); break;
             case "GCG": System.out.print("ala"); break;
-            /*
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            case "": System.out.print(""); break;
-            */
-
-
-
-
-
+            case "UAU": System.out.print("tyr"); break;
+            case "UAC": System.out.print("tyr"); break;
+            case "CAU": System.out.print("his"); break;
+            case "CAC": System.out.print("his"); break;
+            case "CAA": System.out.print("gln"); break;
+            case "CAG": System.out.print("gln"); break;
+            case "AAU": System.out.print("asn"); break;
+            case "AAC": System.out.print("asn"); break;
+            case "AAA": System.out.print("lys"); break;
+            case "AAG": System.out.print("lys"); break;
+            case "GAU": System.out.print("asp"); break;
+            case "GAC": System.out.print("asp"); break;
+            case "GAA": System.out.print("glu"); break;
+            case "GAG": System.out.print("glu"); break;
+            case "UGU": System.out.print("cys"); break;
+            case "UGC": System.out.print("cys"); break;
+            case "UGG": System.out.print("trp"); break;
+            case "CGU": System.out.print("arg"); break;
+            case "CGC": System.out.print("arg"); break;
+            case "CGA": System.out.print("arg"); break;
+            case "CGG": System.out.print("arg"); break;
+            case "AGU": System.out.print("ser"); break;
+            case "AGC": System.out.print("ser"); break;
+            case "AGA": System.out.print("arg"); break;
+            case "AGG": System.out.print("arg"); break;
+            case "GGU": System.out.print("gly"); break;
+            case "GGC": System.out.print("gly"); break;
+            case "GGA": System.out.print("gly"); break;
+            case "GGG": System.out.print("gly"); break;
         }
         
         System.out.print(" - ");
