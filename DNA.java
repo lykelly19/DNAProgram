@@ -1,3 +1,5 @@
+// Transcribes and translates an input DNA strand
+
 import java.util.Scanner;
 
 public class DNA{
@@ -20,7 +22,8 @@ public class DNA{
    
    public static void transcribe(){
       
-      for(int x=0; x<DNAStrand.length();x++){
+      //match DNA and mRNA bases
+      for(int x=0; x<DNAStrand.length();x++){  
          if(DNAStrand.substring(x,x+1).equals("A"))
             mRNA = mRNA + "U";
          else if(DNAStrand.substring(x,x+1).equals("G"))
@@ -31,7 +34,7 @@ public class DNA{
             mRNA = mRNA + "G";
       }
       
-      System.out.println("\nTranscribed to mRNA");
+      System.out.println("\nTranscribing to mRNA...");
       System.out.println("mRNA Strand: " + mRNA);
    }   
    
@@ -46,13 +49,14 @@ public class DNA{
          }
       }
              
-       if(temp_mRNA.length() > 0){
+       if(temp_mRNA.length() > 0){  // only translates if AUG was found
         
-          for(int x=0; x<temp_mRNA.length()-2; x=x+3){
+          for(int x=0; x<temp_mRNA.length()-2; x=x+3){  // look at mRNA bases in groups of three (codons)
             if(temp_mRNA.substring(x,x+3).equals("UAA") || temp_mRNA.substring(x,x+3).equals("UAG") || temp_mRNA.substring(x,x+3).equals("UGA")){  //search for stop codons UAA, UAG, UGA
                System.out.println("\nStop codon " + temp_mRNA.substring(x,x+3) + " found");
                break;
             }
+            
             aminoAcids(temp_mRNA.substring(x,x+3));
             
             if((temp_mRNA.substring(x+3,temp_mRNA.length())).length() < 3)
@@ -64,7 +68,7 @@ public class DNA{
          } 
        }
        else
-         System.out.println("\nStart codon was not found");
+         System.out.println("\nStart codon was not found for translation");
    }
    
    public static void aminoAcids(String codon){
