@@ -8,6 +8,7 @@ public class DNA{
    static String DNAStrand;
    static String mRNA = "";
    static String temp_mRNA = "";
+   static String letter_strand = "";
 
 
    public static void main(String args[])  {
@@ -74,15 +75,15 @@ public class DNA{
    public static void aminoAcids(String codon){
 
        switch(codon){
-            case "AUG": System.out.print("met"); break;
-            case "UUU": System.out.print("phe"); break;
-            case "UUC": System.out.print("phe"); break;
-            case "UUA": System.out.print("leu"); break; 
-            case "UUG": System.out.print("leu"); break;
-            case "CUU": System.out.print("leu"); break;
-            case "CUC": System.out.print("leu"); break;
-            case "CUA": System.out.print("leu"); break;
-            case "CUG": System.out.print("leu"); break;
+            case "AUG": System.out.print("met"); letter_strand = letter_strand + "M"; break;
+            case "UUU": System.out.print("phe"); letter_strand = letter_strand + "F"; break;
+            case "UUC": System.out.print("phe"); letter_strand = letter_strand + "F"; break;
+            case "UUA": System.out.print("leu"); letter_strand = letter_strand + "L"; break; 
+            case "UUG": System.out.print("leu"); letter_strand = letter_strand + "L"; break;
+            case "CUU": System.out.print("leu"); letter_strand = letter_strand + "L"; break;
+            case "CUC": System.out.print("leu"); letter_strand = letter_strand + "L"; break;
+            case "CUA": System.out.print("leu"); letter_strand = letter_strand + "L"; break;
+            case "CUG": System.out.print("leu"); letter_strand = letter_strand + "L"; break;
             case "AUU": System.out.print("ile"); break;
             case "AUC": System.out.print("ile"); break;
             case "AUA": System.out.print("ile"); break;
