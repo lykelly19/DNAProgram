@@ -1,3 +1,7 @@
 # DNAProgram
-New Project for Translation and Transcription (for fun program to help in AP Bio)
-Currently finished transcription
+New Project for Translation and Transcription (rainy-day / for-fun program to help in AP Bio)
+<br/>
+Enter a DNA strand and receive an mRNA strand and amino acids
+
+<br />
+Next Steps ~ one letter amino acids
